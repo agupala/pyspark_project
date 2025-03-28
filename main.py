@@ -7,7 +7,7 @@ def main() -> None:
 
     # Generar datos
     df_creator = DataFrameCreator(spark)
-    df = df_creator.create_sample_dataframe(num_records=200)
+    df = df_creator.create_sample_dataframe(num_records=50)
     df.write.mode("overwrite").csv("data/input_data.csv", header=True)
 
     # Ejecutar ETL
