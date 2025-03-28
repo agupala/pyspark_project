@@ -19,3 +19,6 @@ output/
 # Ignorar configuración del IDE (opcional)
 .vscode/
 .idea/
+
+# Ignorar archivos de entrada
+/data
