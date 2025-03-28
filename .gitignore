@@ -1,5 +1,6 @@
 # Ignorar la carpeta del entorno virtual
 venv/
+.venv/
 
 # Ignorar archivos de configuración de Pipenv
 Pipfile
