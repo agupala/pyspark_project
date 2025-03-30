@@ -14,6 +14,7 @@ __pycache__/
 
 # Ignorar archivos de salida de Spark
 output/
+.output/
 *.parquet
 
 # Ignorar configuración del IDE (opcional)
@@ -22,3 +23,6 @@ output/
 
 # Ignorar archivos de entrada
 /data
+.data/
+
+.DS_Store

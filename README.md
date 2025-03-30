@@ -6,7 +6,7 @@ Este proyecto implementa un proceso ETL simple utilizando PySpark y programació
 
 ```
 etl_project/
-│── data/                # Carpeta con datos de entrada
+│── .data/                # Carpeta con datos de entrada
 │── output/              # Carpeta con datos procesados
 │── etl/                 # Módulo con clases ETL
 │   │── extractor.py     # Clase para extracción de datos
@@ -145,14 +145,14 @@ class ETLJob:
         self.loader = Loader()
 
     def run(self):
-        df = self.extractor.extract("data/sales.csv")
+        df = self.extractor.extract(".data/sales.csv")
         df_transformed = self.transformer.transform(df)
         self.loader.load(df_transformed, "output/sales_processed.parquet")
 ```
 
 ---
 
-## 📊 Dataset de Ejemplo (`data/sales.csv`)
+## 📊 Dataset de Ejemplo (`.data/sales.csv`)
 
 ```csv
 order_id,customer_id,amount,date
@@ -175,7 +175,7 @@ data = {
 }
 
 df = pd.DataFrame(data)
-df.to_csv("data/sales.csv", index=False)
+df.to_csv(".data/sales.csv", index=False)
 print("Archivo sales.csv generado correctamente.")
 ```
 
